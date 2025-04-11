@@ -1,0 +1,356 @@
+@use "fonts" as *;
+@use "map" as *;
+@use "mixin" as *;
+.hero{
+    background-color: map-get($theme-color, "sucess" );
+      .navbar{
+        position: fixed;
+        z-index: 111111;
+        background-color:map-get($theme-color, "sucess" ) ;
+        width: 100%;
+        border-bottom: 3px solid ;
+        box-shadow: 4px 4px 5px #000 ;
+        border-image: 1 linear-gradient(to right , rgb(79, 225, 79) ,rgb(8, 153, 73) , rgb(13, 225, 13) ,rgb(71, 229, 71) );
+        .nav-bar{
+                width: 77%;
+                .navbar-toggler{
+                    border: none;
+                    box-shadow: none;
+                }
+                .collapse{
+                    .navbar-nav{
+                        display: flex;
+                        gap: 1.875rem;
+                        .nav-item{
+                            .nav-link{
+                                color: map-get($theme-color, "white" );
+                                position: relative;
+                                &:hover,&:focus {
+                                    &::after{
+                                        width: 100%;
+                                     }
+                                }
+                                &::after{
+                                    content: '';
+                                  position: absolute;
+                                   bottom: 0;
+                                   left: 0;
+                                     width: 0%;
+                                     height: 3px;
+                                     background-color: fuchsia;
+                                     transition: width 0.3s linear ;
+                                }
+                                &:hover,&:focus{
+                                    color: map-get($theme-color, "gold" );
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+      }
+      .sec{
+        display: flex;
+        gap: 7.5rem;
+        padding-top: 7.8125rem;
+        height: 75vh;
+        padding-inline: 100px;
+        .welcome{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5625rem;
+            a{
+                border-radius: 5px;
+                color: map-get($theme-color , "bold-black" );
+                text-align: center;
+                line-height: 25px;
+                font-size: map-get($theme-color, "20" );
+                width: 31%;
+                padding-block: 10px;
+                background-color: map-get($theme-color, "white" );
+            }
+            .Lorem{
+                display: flex;
+                flex-direction: column;
+                gap: .9375rem;
+                width: 70%;
+                h5{
+                    letter-spacing: 5px;
+                    text-transform: uppercase;
+                    font-size: map-get($fonts, "16" );
+                    line-height: 1.25rem;
+                    font-family: Regular;
+                }
+                h2{
+                    
+                    line-height: 50px;
+                    font-size: map-get($fonts, "40" );
+                }
+                p{
+                    font-size: map-get($fonts, "15" );
+                    line-height: 18.75px;
+                    color: #FFFFFFBF;
+                }
+            }
+        }
+      }
+}
+main{
+     .sec1{
+        .learn{
+            display: flex;
+            justify-content: center;
+          a{ 
+            padding-block: 10px;
+            padding-inline: 18px;
+            align-self: center;
+            font-size: map-get($fonts, "20" );
+            line-height: 25px;
+            font-family: Regular;
+            align-items: center;
+        }
+    }
+        .Dolor{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            h5{
+            color: map-get($theme-color, "sucess" );
+        }
+        h2{
+            line-height: 50px;
+            font-size:map-get($fonts , "40" );
+        }
+        p{
+            line-height: 25px;
+            font-size: 20px;
+            font-family: Regular;
+            color: map-get($theme-color, "bold-black" );
+            width: 32%;
+            align-self: center;
+        }
+
+    }
+        .main-title{
+           &.row{
+            margin-left: 24px;
+           }
+        }
+     }
+     .sec2{
+    .dolor{
+        display: flex;
+         justify-content: space-between;
+        .ipsum{  
+            gap: 1rem;
+            h2{
+               line-height: 3.125rem;
+               font-size: map-get($fonts, "40" );
+                  color: map-get($theme-color, "black" );
+                  width: 55%;
+            }
+            p{
+                font-size: map-get($fonts, "15" );
+                line-height: 1.1719rem;
+                color: #21252980;
+                width: 54%;
+            }
+            span{
+                width: 55%;
+                a{
+                    padding-inline: 20px;
+                    padding-block: 10px;
+                    background-color: map-get($theme-color, "black" );
+                    font-size: map-get($fonts, "20" );
+                    line-height: 25px;
+                    width: 50%;
+                }
+            }
+        }
+     }
+    }
+    .sec3{
+        .sit{
+            .amet{
+                width: 50%;
+                h3{
+                    width: 50%;
+                    font-size: map-get($theme-color, "40" );
+                    line-height: 50px;
+                }
+                p{
+                    color: #21252980;
+                    line-height: 18.75px;
+                    font-size: map-get($fonts, "15" );
+                    width: 70%;
+                }
+                span{
+                    
+                    a{
+                    padding-inline: 20px;
+                    padding-block: 10px;
+                    background-color: map-get($theme-color, "black" );
+                    font-size: 20px;
+                    line-height: 25px;
+                    color: map-get($theme-color, "white" );
+                    }
+                }   
+            }
+        }
+    }
+    .sec4{
+        .our{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+           .team{
+            display: flex;
+             flex-direction: column;
+            h5{
+                color: map-get($theme-color, "sucess" );
+                letter-spacing: 5px;
+                line-height: 20px;
+                font-size: map-get($fonts , "16" );  
+            }
+            h3{
+                font-size: map-get($fonts, "40" );
+                line-height: 50px;
+                color: map-get($theme-color, "black" );
+            }
+            p{
+                font-size: map-get($fonts,"20" );
+                line-height: 25px;
+                color: map-get($theme-color, "bold-black" );
+                width: 35%;
+                align-self: center;
+            }
+        }
+    }
+    .box{
+        padding: 5px;
+        overflow: hidden;
+        position: relative;
+        .CEO{
+            position: static !important;
+            z-index: -1;
+        }
+    }
+    }
+}
+footer{
+    .sec5{
+        background-color: map-get($theme-color, "sucess" );
+        padding: 25px;
+      .media{  
+        .social{
+       
+            gap: 21px;
+        }
+    }
+    }
+}
+@include break-points(mobile){
+   .hero{ 
+   .navbar{ 
+    .nav-bar{
+        width: 100%;
+    }
+}
+.sec{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+    height: 100%;
+    padding-inline: 50px;
+    .welcome{
+        padding-bottom: 20px;
+        .Lorem{
+            width: 100%;
+            h2{
+                font-size: map-get($fonts, "21" );
+                width: 100%;
+            }
+        }
+        display: flex;
+        gap: 25px;
+    }
+   }
+   }
+ main{  
+    .sec1{
+        .learn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+    .Dolor{
+        p{
+            width: 54%;
+        }
+    }
+    .main-title.row{
+        margin-left: 0;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        flex-direction: column;
+        >*{
+            width: auto;
+        }
+    }
+   }
+   .sec2{
+    .dolor{
+       
+        flex-direction: column;
+        align-items: center;
+    .pic{
+        width: 100% !important;
+    }
+    .ipsum{
+        width: 100%;
+        flex-direction: column;
+        p{
+            width: 93%;
+        }
+        span{
+            width: 100%;
+        }
+        h2{
+            font-size: map-get($fonts, "24" );
+            width: 100%;
+        }
+    }
+   }
+}
+.sec3{
+    .sit{
+        flex-direction: column-reverse;
+        .amet{
+            width: 100%;
+           h3{
+            line-height: 1.875rem;
+            width: 100%;
+            font-size: map-get($theme-color, "24" );
+           }  
+          p{
+            width: 100%;
+          }
+        }
+        .pic1{
+            width: 100% !important;
+        }
+    }
+}
+.sec4{
+    .our{
+        .team{
+            p{
+                width: 100%;
+            }
+        }
+    }
+}
+}
+}

@@ -1,0 +1,25 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+.box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: green;
+     width: calc(100% - 10px);
+     height: calc(100% - 10px);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 76%;
+     transition: 0.3s;
+     transform: translateX(calc(-100% - 6px));
+}
+.box:hover::before{
+    transform: translateX(0);
+}

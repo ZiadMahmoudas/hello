@@ -1,0 +1,10 @@
+@use "map" as * ;
+.black-btn{
+    background-color: map-get($theme-color ,"black" );
+    border-radius: 5px;
+    line-height: 20px;
+    font-size: map-get($fonts, "20" );
+    padding-inline: 15px;
+    padding-block: 10px;
+}
+

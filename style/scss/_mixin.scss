@@ -1,0 +1,18 @@
+// @mixin flex($display:flex , $content:center , $align-items:center)
+@use "map" as *;
+
+@mixin break-points($point){
+    @each $name , $value in $point{
+        @if map-has-key($points , $point){
+            $value:map-get($points , $point );
+            @media(max-width:$value){
+                @content;
+            }
+        }
+
+         @else{
+            @error "Unknown breakpoint name: #{$name}";
+         }
+        }
+    }
+            

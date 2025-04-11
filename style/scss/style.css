@@ -7,17 +7,15 @@
   src: url(../../fonts/CrimsonText-Bold.ttf);
 }
 .hero {
-  background-color: #74C69D;
+
 }
 .hero .navbar {
   position: fixed;
   z-index: 111111;
-  background-color: #74C69D;
+
   width: 100%;
   border-bottom: 3px solid;
   box-shadow: 4px 4px 5px #000;
-  -o-border-image: 1 linear-gradient(to right, rgb(79, 225, 79), rgb(8, 153, 73), rgb(13, 225, 13), rgb(71, 229, 71));
-     border-image: 1 linear-gradient(to right, rgb(79, 225, 79), rgb(8, 153, 73), rgb(13, 225, 13), rgb(71, 229, 71));
 }
 .hero .navbar .nav-bar {
   width: 77%;
